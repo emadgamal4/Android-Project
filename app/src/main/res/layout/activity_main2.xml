@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation ="vertical"
     android:background="@color/colorAccent"
-    tools:context=".MainActivity">
+    tools:context=".Main2Activity">
 
 
     <androidx.cardview.widget.CardView
@@ -19,26 +19,35 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <TextView
-                android:id="@+id/textView100"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/Login"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                android:layout_gravity="center_horizontal"/>
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"/>
 
             <EditText
-                android:id="@+id/LEmail"
+                android:id="@+id/Username"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="150dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/editttextstyle"
+                android:hint="Username" />
+
+            <EditText
+                android:id="@+id/Email"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
                 android:background="@drawable/editttextstyle"
                 android:hint="@string/Email" />
 
             <EditText
-                android:id="@+id/LPassword"
+                android:id="@+id/password"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -46,23 +55,31 @@
                 android:background="@drawable/editttextstyle"
                 android:hint="@string/Password" />
 
+            <EditText
+                android:id="@+id/Retypepassword"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/editttextstyle"
+                android:hint="Re_type Password" />
+
             <Button
                 android:textColor="@color/white"
                 android:background="@drawable/buttonstyle"
-                android:id="@+id/Button2"
+                android:id="@+id/Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="100dp"
-                android:text="@string/Login" />
+                android:layout_marginTop="40dp"
+                android:text="Sign Up" />
 
             <TextView
-                android:id="@+id/createText"
+                android:id="@+id/createText1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="New here ? Create an Account" />
-
+                android:text="Already Registered ? Login here" />
 
         </LinearLayout>
 

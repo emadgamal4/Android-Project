@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1006585807622",
+    "firebase_url": "https://view-ramadany-efadb.firebaseio.com",
+    "project_id": "view-ramadany-efadb",
+    "storage_bucket": "view-ramadany-efadb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1006585807622:android:c0e46e49e8371cf8621487",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1006585807622-ji4s6l4kf77hr2mjjcgsd3nmm0qd7ahs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "7628a696259b227010f65d53e25a86665d648eb9"
+          }
+        },
+        {
+          "client_id": "1006585807622-jt32qtuek2j2cftn8khlmcmdt9l4j9u4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClq0kL12Zlio_y1cydxmNvihxEv5n7hXs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1006585807622-jt32qtuek2j2cftn8khlmcmdt9l4j9u4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

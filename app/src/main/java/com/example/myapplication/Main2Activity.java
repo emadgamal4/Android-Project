@@ -17,22 +17,31 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class MainActivity extends AppCompatActivity {
-
-    EditText mEmail,mPassword;
-    TextView mCreateBtn;
+public class Main2Activity extends AppCompatActivity {
+    EditText mUsername,mEmail,mPassword,mRetypepassword;
     Button mbutton;
+    TextView mloginBtn;
     FirebaseAuth fAuth;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        mEmail = findViewById(R.id.LEmail);
-        mPassword = findViewById(R.id.LPassword);
+        setContentView(R.layout.activity_main2);
+
+        mUsername = findViewById(R.id.Username);
+        mEmail = findViewById(R.id.Email);
+        mPassword = findViewById(R.id.password);
+        mRetypepassword = findViewById(R.id.Retypepassword);
+        mbutton = findViewById(R.id.Button);
+        mloginBtn = findViewById(R.id.createText1);
         fAuth = FirebaseAuth.getInstance();
-        mCreateBtn = findViewById(R.id.createText);
-        mbutton = findViewById(R.id.Button2);
+
+        if(fAuth.getCurrentUser() != null){
+            startActivity(new Intent(getApplicationContext(), List1.class));
+            finish();
+        }
 
         mbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,39 +61,48 @@ public class MainActivity extends AppCompatActivity {
                     mPassword.setError("Password Must be >= 6 chars");
                     return;
                 }
-                fAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            if(task.isSuccessful()){
-                                Toast.makeText(MainActivity.this,"Logged In Successfully",Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(getApplicationContext(), List1.class));
-                            }
-                            else{
-                                Toast.makeText(MainActivity.this,"Error !" + task.getException().getMessage(), Toast.LENGTH_SHORT);
-
-                            }
+                            Toast.makeText(Main2Activity.this,"User Created",Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(), List1.class));
                         }
+                        else{
+                            Toast.makeText(Main2Activity.this,"Error !" + task.getException().getMessage(), Toast.LENGTH_SHORT);
+
+                        }
+
                     }
+
                 });
 
-                //openList_activity();
+                //openMain_activity();
             }
         });
-        mCreateBtn.setOnClickListener(new View.OnClickListener() {
+
+        mloginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),Main2Activity.class));
+                startActivity(new Intent(getApplicationContext(),MainActivity.class));
             }
         });
 
 
-
     }
 
-    public void openList_activity() {
-        Intent intent = new Intent(this, List1.class);
-        startActivity(intent);
+
+    //public void openMain_activity() {
+        //Intent intent = new Intent(this, MainActivity.class);
+        //startActivity(intent);
     }
-}
+//}
+
+
+
+
+
+
+
+
 

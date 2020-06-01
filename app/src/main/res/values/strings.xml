@@ -1,6 +1,8 @@
 <resources>
-    <string name="WeatherApp">My Application</string>
+    <string name="WeatherApp">View Ramadany</string>
     <string name="Email">Email</string>
     <string name="Password">Password</string>
     <string name="Login">Login</string>
+    <string name="SignUp" />
+
 </resources>
